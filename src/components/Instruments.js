@@ -1,7 +1,7 @@
 import React from 'react'
 import { MyConsumer } from '../context/MyContext';
 import InstrumentLink from './InstrumentLink';
-import NewButton from './NewButton';
+
 
 
 
@@ -23,11 +23,11 @@ const Instruments = () => {
 
                 return (
                     <div className="instruments" >
-                        <p>Instruments</p>
+                        <p>All Instruments</p>
                             {list}
 
 
-                            <NewButton/>
+                            
                     </div>
                 )
 

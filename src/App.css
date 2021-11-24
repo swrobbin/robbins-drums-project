@@ -1,13 +1,25 @@
 .App {
   text-align: center;
+  font-family: 'Rubik', sans-serif;
+  text-decoration: none;
+  background-color: rgb(53, 110, 93);
+  min-height: 200vh;
+  color: white;
 }
 
 
+a:link, a:visited {
+  text-decoration: none;
+  color: white;
+}
+/* body {
+  background-image: url('robbins-drums/public/Shifty.jpg');
+} */
 
 
 
 .App-header {
-  background-color: #185c45;
+  background-color: #1a3d31dc;
   min-height: 10vh;
   display: flex;
   flex-direction: row;
@@ -17,6 +29,8 @@
   color: white;
   padding: 15px;
   flex: 10;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .App-link {
@@ -25,21 +39,21 @@
 
 .instrument-link{
   border-style: none;
-  border-width: 10px;
-  width: 200px;
-  border-radius: 2px;
-  
+  border-width: 1px;
+  width: 150px;
+  border-radius: 5px;
+  justify-content: space-between;
   /* align-items: right;
   flex-direction: column; */
   
   /* align-self: center;
   justify-self: center; */
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   
-  background-color: #d4c3c2;
+  /* background-color: #d4c3c2; */
   color: white;
-  margin-bottom: 75px;
+  /* margin: 10px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -49,10 +63,11 @@
   border-width: 1px;
   border-color: rgb(255, 255, 255);
   color: white; */
-  background-color: rgb(87, 126, 89);
+  /* background-color: rgb(87, 126, 89); */
   /* padding: 15px; */
-  font-size: 16px;
+  font-size: 20px;
   font-style: bold;
-  text-decoration:none;
+  text-decoration: none;
+
 }
 

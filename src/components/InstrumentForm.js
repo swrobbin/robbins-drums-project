@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { MyConsumer } from '../context/MyContext';
+
 
 const InstrumentForm = () => {
     let navigate = useNavigate();
+    let { brand_id } = useParams();
     const [newInstrument, setNewInstrument] = useState({
         name: '',
         price: '',
         description: '',
-        category: ''
+        category: '',
+        brand_id: brand_id
     })
 
 
@@ -25,7 +28,7 @@ const InstrumentForm = () => {
                 const handleSubmit = (e) => {
                     e.preventDefault()
                     context.addInstrument(newInstrument)
-                    navigate('/instruments') 
+                    navigate(`/brands/${brand_id}`) 
                 }    
 
                 return (
@@ -48,6 +51,7 @@ const InstrumentForm = () => {
                             <br/>
                             <br/>
                             <select name="category" onChange={handleChange} id="category">
+                                <option disabled selected value> -- select an option -- </option>
                                 <option value="snare">Snare Drum</option>
                                 <option value="drumset">Drum Set</option>
                                 <option value="bass drum">Bass Drum</option>

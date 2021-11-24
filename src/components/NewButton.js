@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const NewButton = () => {
+const NewButton = ({brand}) => {
     return (
-        <Link to={'/instruments/new'} >
+        <Link to={`/brands/${brand.id}/instruments/new`} >
             <button className='button'>Add new instrument here!</button>
         </Link>
         

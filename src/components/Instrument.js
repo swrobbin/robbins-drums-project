@@ -24,11 +24,14 @@ const Instrument = (props) => {
                 if (context.instruments.length > 0) {
                     return (
                         <div>
-                            <p>instruuuu</p>
                             <h2>Model: {item.name}</h2>
-                            {/* <h3>Brand: {item.brand.name}</h3> */}
                             <p>Price: {item.price}</p>
+                            <p>Category: {item.category}</p>
                             <p>{item.description}</p>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
                             <button id={item.id} onClick={handleDelete}>Delete Instrument</button>
                             <InstrumentEditLink instrument={item}/>
                         </div>

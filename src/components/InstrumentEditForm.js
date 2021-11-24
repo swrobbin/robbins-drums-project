@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { MyConsumer } from '../context/MyContext'
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 const InstrumentEditForm = () => {
     let { id } = useParams();
+    let navigate = useNavigate();
     const [editedInstrument, setEditedInstrument] = useState({
         name: '',
         price: '',
@@ -11,9 +12,7 @@ const InstrumentEditForm = () => {
         category: ''
     })
 
-    useEffect(() => {
-
-    }, [])
+    
     
     
 
@@ -36,7 +35,18 @@ const InstrumentEditForm = () => {
 
             const handleSubmit = (e) => {
                 e.preventDefault()
-                context.onUpdate(editedInstrument)
+                fetch(`http://localhost:9292/instruments/${editedInstrument.id}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json"},
+                    body: JSON.stringify(editedInstrument)    
+                })
+                .then(r => r.json())
+                .then(data => {
+                    context.onUpdate(data)
+                    navigate(`/instruments/${editedInstrument.id}`)
+                })
+                
             }
 
             return (
@@ -45,20 +55,20 @@ const InstrumentEditForm = () => {
                         <form onSubmit={handleSubmit}>
                             <label>Instrument Name:</label>
                             <br/>
-                            <input type="text" onChange={handleChange} name="name" className="input"/>
+                            <input type="text" value= {editedInstrument.name} onChange={handleChange} name="name" className="input"/>
                             <br/>
                             <br/>
                             <label>Price:</label>
                             <br/>
-                            <input type="text" onChange={handleChange} name="price" className="input"/>
+                            <input type="text"  value= {editedInstrument.price} onChange={handleChange} name="price" className="input"/>
                             <br/>
                             <br/>
                             <label>Description:</label>
                             <br/>
-                            <textarea type="text" onChange={handleChange} name="description" className="input"/>
+                            <textarea type="text" value= {editedInstrument.description} onChange={handleChange} name="description" className="input"/>
                             <br/>
                             <br/>
-                            <select name="category" onChange={handleChange} id="category">
+                            <select name="category" value= {editedInstrument.category} onChange={handleChange} id="category">
                                 <option value="snare">Snare Drum</option>
                                 <option value="drumset">Drum Set</option>
                                 <option value="bass drum">Bass Drum</option>

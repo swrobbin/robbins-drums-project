@@ -4,24 +4,24 @@ import { NavLink } from "react-router-dom"
 const Navbar = () => {
     return (
         <div className="App-header">
-            <p>Robbins' Drums</p>
+            <p><strong>Robbins Drums</strong></p>
             <NavLink 
                 exact to='/' 
                 className="main-nav"
-                activeClassName="main-nav-active">
+                style={({ isActive }) => ({ color: isActive ? 'black' : 'white' })}>
                 Home
             </NavLink>
             <NavLink 
                 exact to='/instruments' 
                 className="main-nav"
-                activeClassName="main-nav-active">
-                Shop
+                style={({ isActive }) => ({ color: isActive ? 'black' : 'white' })}>
+                Instruments
             </NavLink>
             <NavLink 
-                exact to='/contact' 
+                exact to='/brands' 
                 className="main-nav"
-                activeClassName="main-nav-active">
-                Contact
+                style={({ isActive }) => ({ color: isActive ? 'black' : 'white' })}>
+                Brands
             </NavLink>
         </div>
     )

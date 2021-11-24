@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const InstrumentLink = ({instrument}) => {
+const BrandInstrumentLink = ({instrument, brand}) => {
     return (
         <div className="instrument-link">
-            <Link to={`/instruments/${instrument.id}`} className="each-instrument-link" >
-                <br/>
-                {/* {instrument.brand.name} */}
+            <Link to={`/brands/${brand.id}/instruments/${instrument.id}`} className="each-instrument-link" >
                 <br/>
                 {instrument.name}
                 <br/>
@@ -19,4 +17,4 @@ const InstrumentLink = ({instrument}) => {
     )
 }
 
-export default InstrumentLink
+export default BrandInstrumentLink
