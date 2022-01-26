@@ -10,7 +10,6 @@ const BrandInstrumentLink = ({instrument, brand}) => {
                 <br/>
                  ${instrument.price}
                  <br/>
-                {/* {instrument.category} */}
                 <br/>
             </Link>
         </div>

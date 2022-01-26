@@ -35,9 +35,8 @@ const BrandForm = () => {
                             <input  className='button' type="submit" />
                         </form>
                     </div>
-            )
-            }
-        }
+                )
+            }}
         </MyConsumer>
     )
 

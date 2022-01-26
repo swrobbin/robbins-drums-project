@@ -7,16 +7,10 @@
   color: white;
 }
 
-
 a:link, a:visited {
   text-decoration: none;
   color: white;
 }
-/* body {
-  background-image: url('robbins-drums/public/Shifty.jpg');
-} */
-
-
 
 .App-header {
   background-color: #1a3d31dc;
@@ -43,31 +37,16 @@ a:link, a:visited {
   width: 150px;
   border-radius: 5px;
   justify-content: space-between;
-  /* align-items: right;
-  flex-direction: column; */
-  
-  /* align-self: center;
-  justify-self: center; */
   color: white;
   font-size: 15px;
-  
-  /* background-color: #d4c3c2; */
   color: white;
-  /* margin: 10px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
 }
 .instruments {
-  /* border-style: solid;
-  border-width: 1px;
-  border-color: rgb(255, 255, 255);
-  color: white; */
-  /* background-color: rgb(87, 126, 89); */
-  /* padding: 15px; */
   font-size: 20px;
   font-style: bold;
   text-decoration: none;
-
 }
 

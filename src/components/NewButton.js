@@ -5,8 +5,7 @@ const NewButton = ({brand}) => {
     return (
         <Link to={`/brands/${brand.id}/instruments/new`} >
             <button className='button'>Add new instrument here!</button>
-        </Link>
-        
+        </Link> 
     )
 }
 

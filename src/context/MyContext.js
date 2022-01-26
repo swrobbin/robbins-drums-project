@@ -81,7 +81,6 @@ import React, { useState, useEffect } from 'react';
             }
         })
         setInstruments(updatedInstruments)
-
     }
 
     return (

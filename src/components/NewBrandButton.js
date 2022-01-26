@@ -6,7 +6,6 @@ const NewBrandButton = () => {
         <Link to={'/brands/new'} >
             <button className='button'>Add new brand here!</button>
         </Link>
-        
     )
 }
 

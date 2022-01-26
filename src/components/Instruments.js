@@ -11,29 +11,21 @@ const Instruments = () => {
     return  (
         <MyConsumer>
             {context => {
-                    
-                    // console.log(context.instruments, 'FROM CONTEXT')
-                    const list = context.instruments.map((instrument) => {
-                           return (
-                            <div className="instrument-link">
-                            <InstrumentLink key={instrument.id} instrument={instrument}/>
-                            </div>
-                           ) 
-                        })
+                const list = context.instruments.map((instrument) => {
+                        return (
+                        <div className="instrument-link">
+                        <InstrumentLink key={instrument.id} instrument={instrument}/>
+                        </div>
+                        ) 
+                })
 
                 return (
                     <div className="instruments" >
                         <p>All Instruments</p>
-                            {list}
-
-
-                            
+                            {list}   
                     </div>
                 )
-
-
             }}
-
         </MyConsumer>
     )
 
