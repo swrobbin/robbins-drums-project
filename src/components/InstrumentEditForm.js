@@ -12,12 +12,6 @@ const InstrumentEditForm = () => {
         category: ''
     })
 
-    
-    
-    
-
-
-
     return (
         <MyConsumer>
 

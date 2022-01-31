@@ -2,10 +2,6 @@ import React from 'react'
 import { MyConsumer } from '../context/MyContext';
 import InstrumentLink from './InstrumentLink';
 
-
-
-
-
 const Instruments = () => {
    
     return  (

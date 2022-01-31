@@ -13,8 +13,6 @@ const InstrumentForm = () => {
         category: '',
         brand_id: brand_id
     })
-
-
     return (
         <MyConsumer>
             {context => {
